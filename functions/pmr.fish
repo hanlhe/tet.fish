@@ -1,4 +1,3 @@
-# ssh access to mongodb
 function pmr -d "Query PMR status" -a user_id
     if not string length -q -- $user_id
         set user_id hanlhe
