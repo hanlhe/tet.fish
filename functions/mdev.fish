@@ -7,6 +7,7 @@ function mdev -d "establish dev ssh tunnel to cluster" -a cluster
         -L 9196:1.1.1.12:9196 \
         -L 8090:druidHistoricalBroker-1:8090 \
         -L 8889:orchestrator-1:8889 \
+        -L 6443:127.0.0.1:6443 \
         -L 9696:appserver-1:9696 \
         -L 7733:appserver-1:7733 \
         -L 4242:tsdbBosunGrafana-1:4242 \
