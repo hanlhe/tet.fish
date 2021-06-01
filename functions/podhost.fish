@@ -11,5 +11,5 @@ function podhost -d 'ssh to pod host <host name>' -a podhostname
         return 1
     end
     set --local podid (string sub -s 11 -l 3 $podhostname)
-    ssh -t b13e2e-nat-vlan$podid.h4.ai "sudo su - h4qa1 -c 'ssh -t $podhostname'"
+    ssh -t b13e2e-nat-vlan$podid.h4.ai "sudo su - h4qa1 -c 'ssh -t -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no -o ServerAliveInterval=60 -o ServerAliveCountMax=3 $podhostname'"
 end
