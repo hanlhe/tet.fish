@@ -1,4 +1,4 @@
-function tetclusterscp -d "ssh to cluster orchestrator" -a cluster file host
+function tetclusterscp -d "scp file to cluster" -a cluster file host
     if not string length -q -- $cluster
         echo Please specify the cluster name.
         return 1
